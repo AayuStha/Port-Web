@@ -55,7 +55,7 @@ nameElement.addEventListener('mouseleave', () => {
   nameElement.innerHTML = 'आयुष';
 });
 nameElement.addEventListener('click', () => {
-  const audioFile = new Audio('./transkate_tts.mp3');
+  const audioFile = new Audio('./translate_tts.mp3');
   audioFile.play();
 });
 
