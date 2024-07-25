@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Aayush Shrestha</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body onload="document.body.style.opacity='1'">
+    <div class="nav">
+        <div class="logo">
+            <a href="/index.html"><h2>Aayush Shrestha</h2></a>
+        </div>
+        <div class="link">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <div class="togglebtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="contact-container">
+        <form action="" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <input type="text" name="username" id="username" placeholder="Your name" class="contact-inputs" required>
+            <input type="email" name="email" id="email" placeholder="Your email" class="contact-inputs" required>
+            <textarea name="message" id="message" placeholder="Your message" class="contact-inputs" required></textarea>
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        <div class="contact-right">
+            <img src="img/right_img.png">
+        </div>
+    </div>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDf3SSWXo3m8Q65R54ZHSXhcUdyi_f05sg",
+            authDomain: "portfoliocontact-364ee.firebaseapp.com",
+            projectId: "portfoliocontact-364ee",
+            storageBucket: "portfoliocontact-364ee.appspot.com",
+            messagingSenderId: "1093662965320",
+            appId: "1:1093662965320:web:57c9591ac2d44a857da27d"
+        };
+    </script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.12.3/firebase-database.js";
+
+        const app = initializeApp(firebaseConfig);
+
+        const db= getDatabase(app);
+
+        document.getElementById("submit").addEventListener("click", function(e){
+            e.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            if (!username || !email || !message) {
+                alert("Please fill in all inputs.");
+                return;
+            }
+
+            set(ref(db, 'user/' + username),{
+                username: username,
+                email: email,
+                message: message,
+            });
+            alert("I will reach out to you at the earliest convenience. Thank you.");
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Media Queries */
+@media (max-width: 768px) {
+    /* Tablet and below */
+    html{
+        overflow-x: hidden;
+    }
+    .container {
+      width: 95%;
+    }
+    .hero {
+        height: auto; 
+    }
+    .myPic{
+        transform: translateX(25px) !important;
+    } 
+    .tools{
+        width: 400px;
+        margin-top: 40px;
+        transform: translateX(-10px);
+    }
+    .tools h2{
+        transform: translateX(-90px);
+        white-space: nowrap;
+    }
+    .about{
+        margin-top: 400px;
+        width: 400px;
+        transform: translateX(-175px);      
+    }
+    .about h2{
+        transform: translateX(-270px);
+        white-space: nowrap;
+    }
+    .codeBlock{
+        width: 300px;
+        height: auto; 
+    }
+}
+  
+  @media (max-width: 480px) {
+    /* Mobile */
+    .container {
+      width: 100%;
+    }
+    .hero{
+        overflow-x: hidden !important;
+    }
+    .main{
+        display: block;
+    }
+    .myPic{
+        transform: translateX(30px);
+        margin-top: -20px;
+        width: 300px !important;
+        margin-left: 15px;
+        height: 300px !important;
+    }
+    .main-detil{
+        transform: translateY(-50px);
+    }
+    .main-detil h1{
+        font-size: 40px !important;
+    }
+    .main-detil p{
+        font-size: 30px;
+    }
+    .logo{
+        transform: translateX(-180px);
+        white-space: nowrap;
+    }
+    .togglebtn{
+        transform: translateX(-40px);
+        font-size: 25px;
+    }
+
+    .post-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 1000px;
+    }
+    .about{
+        margin-bottom: 150px;
+
+    }
+
+    
+  }
+
+  @media(max-width: 992px){ 
+    .link ul li{
+        display: none;
+    }
+    .link .togglebtn{
+        display: block;
+        color: black;
+        
+    }
+    .dropdown.open{
+        display: block;
+        margin-top: 20px;
+    }
+    .myPic{
+        transform: translateX(45px);
+    }
+    
+  }
