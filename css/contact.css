@@ -1,29 +1,36 @@
 *{
     margin: 0;
-    padding: 0;box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body{
     font-family: 'Outfit';
 }
+
 .contact-container{
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    transform: translateY(-100px);
+    padding-top: 50px; 
+    position: relative; 
 }
+
 .contact-left{
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: 20px;
 }
+
 .contact-left-title h2{
     font-weight: 600;
-    color:#a353aa;
+    color: #a353aa;
     font-size: 40px;
     margin-bottom: 5px;
 }
+
 .contact-left-title hr{
     border: none;
     width: 120px;
@@ -32,6 +39,7 @@ body{
     border-radius: 10px;
     margin-bottom: 20px;
 }
+
 .contact-inputs{
     width: 400px;
     height: 50px;
@@ -42,17 +50,21 @@ body{
     color: #666;
     border-radius: 50px;
 }
+
 .contact-left textarea{
     height: 140px;
     padding-top: 15px;
     border-radius: 20px;
 }
+
 .contact-inputs:focus{
     border: 2px solid #ff994f;
 }
+
 .contact-inputs::placeholder{
     color: #a9a9a9;
 }
+
 .contact-left button{
     display: flex;
     align-items: center;
@@ -68,9 +80,11 @@ body{
 .contact-left button img{
     height: 15px;
 }
+
 .contact-right img{
     width: 500px;
 }
+
 @media(max-width: 800px){
     .contact-inputs{
         width: 80vw;
@@ -78,4 +92,11 @@ body{
     .contact-right{
         display: none;
     }
+}
+
+.dropdown {
+    position: absolute; /* Makes it float over other content */
+    top: 50px; /* Adjust position based on your layout */
+    right: 0;
+    z-index: 9999; /* Ensure it is above other elements */
 }

@@ -4,19 +4,28 @@ const dropdown = document.querySelector(".dropdown");
 const hero = document.querySelector(".hero");
 const btn2 = document.querySelector(".btn-2");
 
-
 toggleBtn.addEventListener('click', function(event) {
-	dropdown.classList.toggle("open");
-	const isOpen = dropdown.classList.contains("open");
-	toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-	event.stopPropagation();
+    // Toggle the dropdown visibility
+    dropdown.classList.toggle("open");
+    const isOpen = dropdown.classList.contains("open");
+    toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+
+    // Prevent event from bubbling up to the document
+    event.stopPropagation();
 });
 
-document.body.addEventListener('click', function() {
-	if (dropdown.classList.contains("open")) {
-		dropdown.classList.remove("open");
-		toggleBtnIcon.classList = 'fa-solid fa-bars';
-	}
+// Close dropdown if clicking outside of it
+document.body.addEventListener('click', function(event) {
+    // Ensure dropdown only closes when clicking outside the menu
+    if (!dropdown.contains(event.target) && dropdown.classList.contains("open")) {
+        dropdown.classList.remove("open");
+        toggleBtnIcon.classList = 'fa-solid fa-bars';
+    }
+});
+
+// Prevent dropdown from closing when clicking inside the dropdown
+dropdown.addEventListener('click', function(event) {
+    event.stopPropagation();
 });
 
 hero.addEventListener('scroll', function() {
@@ -26,16 +35,11 @@ hero.addEventListener('scroll', function() {
     }
 });
 
-dropdown.addEventListener('click', function(event) {
-	event.stopPropagation();
-});
-
-
 btn2.addEventListener("click", ()=>{
     window.location.href="projects.html";
 });
 
-
+// Typewriter effect for animation
 const texts = ['Student', 'Web Developer'];
 let count = 0;
 let index = 0;
@@ -59,6 +63,7 @@ let letter = '';
     }
 })();
 
+// CV download functionality
 document.getElementById('downloadCvButton').addEventListener('click', function() {
     var downloadLink = document.createElement('a');
     downloadLink.href = 'files/CV.pdf';
@@ -68,8 +73,7 @@ document.getElementById('downloadCvButton').addEventListener('click', function()
     document.body.removeChild(downloadLink);
 });
 
-
-// disable developer mode
+// Disable developer tools
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false;
@@ -86,4 +90,4 @@ document.onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
         return false;
     }
-  }
+}

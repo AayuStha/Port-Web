@@ -39,17 +39,24 @@
   
   @media (max-width: 480px) {
     /* Mobile */
+    body{
+        transform: translateX(-10px);
+    }
     .container {
       width: 100%;
+    }
+    .nav{
+        transform: translateX(40px);
     }
     .hero{
         overflow-x: hidden !important;
     }
     .main{
         display: block;
+        transform: translateX(10px);
     }
     .myPic{
-        transform: translateX(30px);
+        transform: translateX(30px) !important;
         margin-top: -20px;
         width: 300px !important;
         margin-left: 15px;
@@ -80,7 +87,13 @@
     }
     .about{
         margin-bottom: 150px;
+        margin-top: 50vh;
+        transform: translateX(-150px);
     }
+    .tools{
+        transform: translateX(10px);
+    }
+    
 
     
   }

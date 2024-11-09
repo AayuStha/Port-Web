@@ -43,7 +43,7 @@ body {
     display: none;
 }
 
-.dropdown{
+.dropdown {
     position: absolute;
     display: none;
     right: 2em;
