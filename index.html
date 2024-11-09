@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Portfolio | Aayush Shrestha</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -27,17 +27,17 @@
 </head>
 
 <body onload="document.body.style.opacity='1'">
-    <div class="hero">
+    <div class="hero" id="home">
         <div class="nav">
             <div class="logo">
                 <a href="index.html"><h2>Aayush Shrestha</h2></a>
             </div>
             <div class="link">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="/projects.html">Projects</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="togglebtn">
                     <i class="fa-solid fa-bars"></i>
@@ -96,7 +96,7 @@
             <a href=""><img src="logos/wordpress.png"></a>
         </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
         <h2>About me</h2>
         <div class="codeBlock">
             <div class="codetools">
@@ -122,9 +122,67 @@
             </div>
         </div>
     </div>
-    
+
+    <section class="s1" id="projects">
+        <div class="main-container">
+            <h1 style="text-align: center">Some of my recent projects</h1>
+            <div class="post-wrapper">
+                <!-- Project 1 -->
+                <div class="post">
+                        <img class="thumbnail" src="img/project1.JPG" alt="project1" />
+                    <div class="post-preview">
+                        <h2 class="post-title">Admission Form</h2>
+                        <p class="post-intro">
+                            This is a simple admission form that I have created by learning "Responsive Web Design" from 
+                            <a href="www.freecodecamp.org">freeCodeCamp</a>
+                            as my first project.
+                        </p>
+                        <a href="https://codepen.io/aayustha/pen/VwXqvZv" class="goto" target="_blank">Go to website</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="post">
+                    
+                    <img class="thumbnail" src="img/project2.png" alt="project2" />
+                
+                    <div class="post-preview">
+                        <h2 class="post-title">Donation Hero</h2>
+                        <p class="post-intro">
+                            A donation website made with HTML5, CSS3, PHP on Sagarmatha Hacks 2023.
+                        </p>
+                        <a href="https://texttoart.onrender.com/" class="goto" target="_blank">Go to website</a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="post">
+                    
+                    <img class="thumbnail" src="img/project3.png" alt="project3" />
+                
+                    <div class="post-preview">
+                        <h2 class="post-title">BagSalesNepal</h2>
+                        <p class="post-intro">
+                            An e-commerce platform for curated selation of bags. A minor project made with HTML5, CSS3 and PHP.  
+                        </p>
+                        <a href="http://bagshopnepal.000.pe/project-ecommerce/" class="goto" target="_blank">Go to website</a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="post">
+                    
+                    <img class="thumbnail" src="img/project4.png" alt="project4" />
+                
+                    <div class="post-preview">
+                        <h2 class="post-title">Text to Art</h2>
+                        <p class="post-intro">
+                            A Node.js app to generate captivating ASCII art from user input.
+                        </p>
+                        <a href="https://texttoart.onrender.com/" class="goto" target="_blank">Go to website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
-
 </html>
