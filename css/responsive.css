@@ -46,17 +46,17 @@
       width: 100%;
     }
     .nav{
-        transform: translateX(70px);
+        transform: translateX(30px);
     }
     .hero{
         overflow-x: hidden !important;
     }
     .main{
         display: block;
-        transform: translateX(37px);
+        transform: translateX(12px);
     }
     .myPic{
-        transform: translateX(48px) !important;
+        transform: translateX(28px) !important;
         margin-top: -20px;
         width: 300px !important;
         margin-left: 15px;
@@ -87,17 +87,20 @@
     }
     .about{
         margin-bottom: 150px;
-        margin-top: 50vh;
-        transform: translateX(-125px);
+        margin-top: 60vh;
+        transform: translateX(-160px);
+    }
+    .about h2{
+        transform: translateX(-75vw);
     }
     .tools{
-        transform: translateX(40px);
+        transform: translateX(7px);
     }
     #projects h1{
-        transform: translateX(-18px);
+        transform: translateX(px);
     }
     #projects{
-        transform: translateX(54px);
+        transform: translateX(17px);
     }
 
     
