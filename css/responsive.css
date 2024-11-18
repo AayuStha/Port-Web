@@ -45,6 +45,9 @@
     .container {
       width: 100%;
     }
+    .logo > a > h2{
+        text-align: center !important;
+    }
     .nav{
         transform: translateX(30px);
     }
@@ -56,7 +59,7 @@
         transform: translateX(12px);
     }
     .myPic{
-        transform: translateX(28px) !important;
+        transform: translateX(48px) !important;
         margin-top: -20px;
         width: 300px !important;
         margin-left: 15px;
@@ -85,10 +88,13 @@
         flex-direction: column;
         width: 1000px;
     }
+    .togglebtn{
+        display: none !important;
+    }
     .about{
-        margin-bottom: 150px;
+        margin-bottom: 60vh;
         margin-top: 60vh;
-        transform: translateX(-160px);
+        transform: translateX(8vw);
     }
     .about h2{
         transform: translateX(-75vw);

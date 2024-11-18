@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         btn2.addEventListener("click", ()=>{
-            window.location.href="projects.html";
+            window.location.href="#projects";
         });
 
         // Typewriter effect
